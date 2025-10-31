@@ -1,4 +1,4 @@
-import { Smartphone, Monitor, Download as DownloadIcon, ArrowRight } from 'lucide-react'
+import { Smartphone, Download as ArrowRight } from 'lucide-react'
 
 export default function Download() {
   return (
