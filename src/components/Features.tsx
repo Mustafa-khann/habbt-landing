@@ -56,11 +56,11 @@ export default function Features() {
   return (
     <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
             Features that keep you consistent
           </h2>
-          <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Thoughtfully designed to help you build momentum and stay on track.
           </p>
         </div>
@@ -71,13 +71,13 @@ export default function Features() {
             return (
               <div 
                 key={index}
-                className="rounded-xl border border-slate-200 p-6 hover:bg-slate-50 transition-colors"
+                className="rounded-xl border border-slate-200 p-6 hover:bg-slate-50 hover:shadow-sm transition duration-200"
               >
-                <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center mb-4 shadow-sm">
                   <Icon size={20} />
                 </div>
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-slate-600 text-sm">{feature.description}</p>
+                <h3 className="font-semibold mb-2 text-slate-900">{feature.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             )
           })}

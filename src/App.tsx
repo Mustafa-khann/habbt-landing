@@ -1,20 +1,17 @@
-import Hero from './components/Hero'
-import Features from './components/Features'
-import Pricing from './components/Pricing'
-import Download from './components/Download'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Pricing />
-      <Download />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+      </Routes>
+    </Router>
   )
 }
 

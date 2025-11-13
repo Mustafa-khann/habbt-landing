@@ -1,26 +1,33 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
   const scrollToSection = (id: string) => {
+    if (location.pathname !== '/') {
+      // If not on home page, navigate to home first
+      window.location.href = `/#${id}`
+      return
+    }
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: 'smooth' })
     setIsOpen(false)
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
             <picture>
               <source srcSet="/logo-dark.png" media="(prefers-color-scheme: dark)" />
               <img src="/logo-light.png" alt="Habbt logo" className="h-6 w-6" />
             </picture>
             <span className="font-semibold">Habbt</span>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => scrollToSection('features')} className="text-slate-600 hover:text-slate-900 transition">

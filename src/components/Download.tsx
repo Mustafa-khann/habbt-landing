@@ -20,7 +20,8 @@ export default function Download() {
               <Smartphone size={24} />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-center">Mobile app</h3>
-            <p className="text-slate-600 mb-6 text-center text-sm">
+            <p className="text-slate-600 m
+            b-6 text-center text-sm">
               Track habits on the go for iOS and Android.
             </p>
             
