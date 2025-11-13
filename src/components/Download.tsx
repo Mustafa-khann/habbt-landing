@@ -20,13 +20,12 @@ export default function Download() {
               <Smartphone size={24} />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-center">Mobile app</h3>
-            <p className="text-slate-600 m
-            b-6 text-center text-sm">
+            <p className="text-slate-600 mb-6 text-center text-sm">
               Track habits on the go for iOS and Android.
             </p>
             
             <div className="space-y-3">
-              <button className="w-full rounded-lg border border-slate-300 p-4 transition hover:bg-slate-50 flex items-center justify-between group">
+              <button className="w-full rounded-lg border border-slate-300 p-4 transition hover:bg-slate-50 flex items-center justify-between group relative opacity-75 cursor-not-allowed">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6" viewBox="0 0 24 24">
@@ -38,7 +37,10 @@ export default function Download() {
                     <div className="font-semibold">App Store</div>
                   </div>
                 </div>
-                <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">Coming Soon</span>
+                  <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
+                </div>
               </button>
 
               <button className="w-full rounded-lg border border-slate-300 p-4 transition hover:bg-slate-50 flex items-center justify-between group">
