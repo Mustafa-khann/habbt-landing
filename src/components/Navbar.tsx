@@ -8,7 +8,6 @@ export default function Navbar() {
 
   const scrollToSection = (id: string) => {
     if (location.pathname !== '/') {
-      // If not on home page, navigate to home first
       window.location.href = `/#${id}`
       return
     }
@@ -18,68 +17,78 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
-            <picture>
-              <source srcSet="/logo-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="/logo-light.png" alt="Habbt logo" className="h-6 w-6" />
-            </picture>
-            <span className="font-semibold">Habbt</span>
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-accent-blue flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+              H
+            </div>
+            <span className="font-bold text-xl tracking-tight text-white group-hover:text-primary-light transition-colors">Habbt</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('features')} className="text-slate-600 hover:text-slate-900 transition">
-              Features
-            </button>
-            <button onClick={() => scrollToSection('pricing')} className="text-slate-600 hover:text-slate-900 transition">
-              Pricing
-            </button>
-            <button onClick={() => scrollToSection('download')} className="text-slate-600 hover:text-slate-900 transition">
+            {['Features', 'Pricing'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="text-sm font-medium text-text-secondary hover:text-white transition-colors"
+              >
+                {item}
+              </button>
+            ))}
+            <button
+              onClick={() => scrollToSection('download')}
+              className="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-medium transition-all hover:scale-105 active:scale-95"
+            >
               Download
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('download')}
-              className="px-4 py-2 rounded-md bg-primary-600 text-white hover:bg-primary-700 transition"
+              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-accent-blue text-white text-sm font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95"
             >
-              Get the app
+              Get Started
             </button>
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-text-secondary hover:text-white transition-colors"
+              aria-label="Toggle menu"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden border-t border-slate-200">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <button 
-                onClick={() => scrollToSection('features')}
-                className="block w-full text-left px-3 py-2 rounded hover:bg-slate-50 transition"
-              >
-                Features
-              </button>
-              <button 
-                onClick={() => scrollToSection('pricing')}
-                className="block w-full text-left px-3 py-2 rounded hover:bg-slate-50 transition"
-              >
-                Pricing
-              </button>
-              <button 
-                onClick={() => scrollToSection('download')}
-                className="block w-full text-left px-3 py-2 rounded hover:bg-slate-50 transition"
-              >
-                Download
-              </button>
-              <button 
-                onClick={() => scrollToSection('download')}
-                className="block w-full px-3 py-2 mt-2 rounded-md bg-primary-600 text-white hover:bg-primary-700"
-              >
-                Get the app
-              </button>
+          <div className="md:hidden border-t border-white/5 bg-surface/95 backdrop-blur-xl absolute left-0 right-0 p-4 shadow-2xl animate-in slide-in-from-top-5">
+            <div className="space-y-2">
+              {['Features', 'Pricing'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="block w-full text-left px-4 py-3 rounded-xl text-text-secondary hover:text-white hover:bg-white/5 transition-all"
+                >
+                  {item}
+                </button>
+              ))}
+              <div className="pt-4 space-y-3">
+                <button
+                  onClick={() => scrollToSection('download')}
+                  className="block w-full px-4 py-3 rounded-xl bg-white/5 text-white font-medium text-center hover:bg-white/10 transition-all"
+                >
+                  Download
+                </button>
+                <button
+                  onClick={() => scrollToSection('download')}
+                  className="block w-full px-4 py-3 rounded-xl bg-gradient-to-r from-primary to-accent-blue text-white font-bold text-center shadow-lg shadow-primary/20"
+                >
+                  Get Started
+                </button>
+              </div>
             </div>
           </div>
         )}

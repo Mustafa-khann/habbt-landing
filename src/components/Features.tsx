@@ -1,9 +1,9 @@
-import { 
-  CheckCircle2, 
-  TrendingUp, 
-  Bell, 
-  Users, 
-  Target, 
+import {
+  CheckCircle2,
+  TrendingUp,
+  Bell,
+  Users,
+  Target,
   Award,
   Calendar,
   Zap
@@ -54,14 +54,20 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+      {/* Background Elements */}
+      <div className="absolute top-1/2 left-0 w-full h-full max-w-7xl -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -left-64 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 -right-64 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
+      </div>
+
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
-            Features that keep you consistent
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
+            Features that keep you <span className="text-primary">consistent</span>
           </h2>
-          <p className="mt-4 text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Thoughtfully designed to help you build momentum and stay on track.
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Thoughtfully designed to help you build momentum and stay on track with your goals.
           </p>
         </div>
 
@@ -69,15 +75,15 @@ export default function Features() {
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <div 
+              <div
                 key={index}
-                className="rounded-xl border border-slate-200 p-6 hover:bg-slate-50 hover:shadow-sm transition duration-200"
+                className="group p-8 rounded-2xl bg-surface border border-white/5 hover:border-primary/30 hover:bg-surfaceLight transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-primary/5"
               >
-                <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center mb-4 shadow-sm">
-                  <Icon size={20} />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent-blue/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Icon size={24} className="text-primary group-hover:text-primary-light transition-colors" />
                 </div>
-                <h3 className="font-semibold mb-2 text-slate-900">{feature.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary-light transition-colors">{feature.title}</h3>
+                <p className="text-text-secondary leading-relaxed">{feature.description}</p>
               </div>
             )
           })}

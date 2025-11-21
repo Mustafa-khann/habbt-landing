@@ -7,29 +7,26 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Habbt Mobile App Palette (Dark Mode)
+        background: '#0a0e1a',
+        surface: '#151a2e',
+        surfaceLight: '#1e2439',
         primary: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316',
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
+          DEFAULT: '#06b6d4', // Cyan-500
+          dark: '#0891b2',    // Cyan-600
+          light: '#22d3ee',   // Cyan-400
+        },
+        secondary: {
+          DEFAULT: '#8b5cf6', // Purple-500
+          dark: '#7c3aed',    // Purple-600
+        },
+        text: {
+          DEFAULT: '#ffffff',
+          secondary: '#cbd5e1',
+          muted: '#64748b',
         },
         accent: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
+          blue: '#3b82f6', // Blue-500 (for gradients)
         }
       },
       fontFamily: {
