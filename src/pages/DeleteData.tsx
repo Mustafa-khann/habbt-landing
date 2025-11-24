@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
 /**
  * Public page for requesting deletion of all personal data.
