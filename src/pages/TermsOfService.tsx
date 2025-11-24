@@ -23,6 +23,11 @@ export default function TermsOfService() {
             <p className="mb-4">
               These Terms apply to all users of the App, including without limitation users who are browsers, vendors, customers, merchants, and/or contributors of content.
             </p>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6">1.1 Eligibility</h3>
+            <p className="mb-4">
+              You must be at least 13 years old to use the App. By agreeing to these Terms, you represent and warrant that you are at least 13 years of age. If you are under 13, you may not use the App.
+            </p>
           </section>
 
           <section className="mb-8">
@@ -42,7 +47,7 @@ export default function TermsOfService() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">3. User Accounts</h2>
-            
+
             <h3 className="text-xl font-semibold mb-3 mt-6">3.1 Account Creation</h3>
             <p className="mb-4">
               To use certain features of the App, you must register for an account. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate, current, and complete.
@@ -78,7 +83,7 @@ export default function TermsOfService() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">5. User Content</h2>
-            
+
             <h3 className="text-xl font-semibold mb-3 mt-6">5.1 Ownership</h3>
             <p className="mb-4">
               You retain ownership of any content you create, upload, or share through the App ("User Content"). By using the App, you grant us a worldwide, non-exclusive, royalty-free license to use, store, display, reproduce, and distribute your User Content solely for the purpose of providing and improving the App.
@@ -104,7 +109,7 @@ export default function TermsOfService() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">7. Social Features and Habit Circles</h2>
-            
+
             <h3 className="text-xl font-semibold mb-3 mt-6">7.1 Habit Circles</h3>
             <p className="mb-4">
               The App allows users to create and join "habit circles" to build habits together with friends and family. When you join a circle, other members may see your progress and participation.
@@ -123,7 +128,7 @@ export default function TermsOfService() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">8. Subscription and Payment</h2>
-            
+
             <h3 className="text-xl font-semibold mb-3 mt-6">8.1 Free Service</h3>
             <p className="mb-4">
               The App is currently available free of charge. We reserve the right to introduce premium features or subscription plans in the future.
@@ -142,7 +147,7 @@ export default function TermsOfService() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">9. Disclaimers</h2>
-            
+
             <h3 className="text-xl font-semibold mb-3 mt-6">9.1 Service Availability</h3>
             <p className="mb-4">
               The App is provided "as is" and "as available." We do not guarantee that the App will be available at all times, uninterrupted, secure, or error-free. We may experience downtime for maintenance, updates, or technical issues.
