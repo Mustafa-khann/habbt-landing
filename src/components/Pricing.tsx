@@ -96,6 +96,7 @@ export default function Pricing() {
                   'Unlimited circles and habits',
                   'Priority support',
                   'Custom reminders & widgets',
+                  'Support an indie developer',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 size={20} className="text-primary mt-0.5" />
