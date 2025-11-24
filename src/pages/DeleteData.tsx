@@ -61,8 +61,8 @@ export default function DeleteData() {
             </button>
             <p className="mt-4 text-sm text-gray-400">
                 If the button does not work, you can also email us directly at{' '}
-                <a href="mailto:support@habbt.com" className="underline">
-                    support@habbt.com
+                <a href="mailto:mustafakhann050@gmail.com" className="underline">
+                    mustafakhann050@gmail.com
                 </a>
                 .
             </p>
